@@ -4,9 +4,11 @@ services:
     image: "exercise-3"
     volumes:
       - .:/app
+      - ~/.aws:/root/.aws:ro  # Mount AWS credentials directory
     command: python3 -m pytest
   run:
     image: "exercise-3"
     volumes:
       - .:/app
+      - ~/.aws:/root/.aws:ro  # Mount AWS credentials directory
     command: python3 main.py
